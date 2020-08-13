@@ -18,8 +18,7 @@ fun shuffle(deck: MutableList<String>) {
     val rand = (0..52).random()
     
 	// start from end of the list
-	for (i in deck.size - 1 downTo 1)
-	{
+	for (i in deck.size - 1 downTo 1) {
 		// get a random index j such that 0 <= j <= i
 		val j = (0..i+1).random()
 
