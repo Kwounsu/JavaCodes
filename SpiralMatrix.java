@@ -1,46 +1,35 @@
 public class Main {
-    static int ROW = 4; 
-    static int COLUMN = 4; 
-    
-    static void spiralMatrix(int a[][]) {
-        /*  
-         * i - iterator 
-         * r - starting Row index 
-         * c - starting Column index 
-         * w - ending roW index 
-         * n - ending columN index 
-         */
-        int i, r = 0, c = 0, w = ROW, n = COLUMN;
-  
-        while (r < w && c < n) { 
-            // Print the first row from the remaining rows 
-            for (i = c; i < n; i++) { 
-                System.out.print(a[r][i] + " "); 
-            } 
-            r++; 
-  
-            // Print the last column from the remaining columns 
-            for (i = r; i < w; i++) { 
-                System.out.print(a[i][n - 1] + " "); 
-            } 
-            n--; 
-  
-            // Print the last row from the remaining rows */ 
-            if (r < w) { 
-                for (i = n - c; i >= c; i--) { 
-                    System.out.print(a[w - 1][i] + " "); 
-                } 
-                w--; 
-            } 
-  
-            // Print the first column from the remaining columns */ 
-            if (c < n) { 
-                for (i = w - 1; i >= r; i--) { 
-                    System.out.print(a[i][c] + " "); 
-                } 
-                c++; 
-            } 
-        } 
+    static void spiralMatrix(int matrix[][]) {
+        int left = 0;
+        int right = matrix[0].length - 1;
+        int top = 0;
+        int bottom = matrix.length - 1;
+
+        while((bottom >= top) && (right >= left)){
+            // Traverse from Left to Right
+            for(int j = left; j <= right; j++){
+                System.out.print(matrix[top][j] + " ");
+            }
+            top++;
+
+            // Traverse from Top to Bottom
+            for(int i = top; i <= bottom; i++){
+                System.out.print(matrix[i][right] + " ");
+            }
+            right--;
+
+            // Traverse from Right to Left
+            for(int j=right; j>=left; j--){
+                System.out.print(matrix[bottom][j] + " ");
+            }
+            bottom--;
+
+            // Traverse from Bottom to Top
+            for(int i=bottom; i>=top; i--){
+                System.out.print(matrix[i][left] + " ");
+            }
+            left++;
+        }
     }
     
     public static void main(String[] args) {
