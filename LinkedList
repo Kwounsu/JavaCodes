@@ -63,7 +63,7 @@ public class MyLinkedList {
 		int count = 0;
 		while(temp!=null && ++count!=index){
 			return temp.val;
-        }
+        	}
         return 0;
 	}
     
