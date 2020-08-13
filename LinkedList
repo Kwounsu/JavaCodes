@@ -25,9 +25,7 @@ public class MyLinkedList {
 		list.printLinkedList();
 	}
 	
-	/*
-	 * Adds node at the end of the list
-	 */
+	// Adds node at the end of the list
 	public void add(int val){
 		if(head == null){
 			Node temp = new Node(val);
@@ -39,9 +37,7 @@ public class MyLinkedList {
 		}
 	}
     
-	/*
-	 * Prints the list
-	 */
+	// Prints the list
 	public void printLinkedList(){
 		Node temp = head;
 		while(temp != null){
@@ -51,9 +47,7 @@ public class MyLinkedList {
         System.out.println();
 	}
     
-	/*
-	 * Retrun length of the list
-	 */
+	// Retrun length of the list
 	public int length(){
         int length = 0;
 		Node temp = head;
@@ -63,9 +57,7 @@ public class MyLinkedList {
         return length;
 	}
     
-    /*
-	 * Return value at the tager index of the list
-	 */
+    	// Return value at the tager index of the list
 	public int get(int index){
 		Node temp = head;
 		int count = 0;
@@ -75,9 +67,7 @@ public class MyLinkedList {
         return 0;
 	}
     
-	/*
-	 * Reverse the list
-	 */
+	// Reverse the list
 	public void reverse() { 
         Node temp = head;
         Node previous = null, current = null;
