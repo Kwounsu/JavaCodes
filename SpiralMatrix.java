@@ -19,13 +19,13 @@ public class Main {
             right--;
 
             // Traverse from Right to Left
-            for(int j=right; j>=left; j--){
+            for(int j = right; j >= left; j--){
                 System.out.print(matrix[bottom][j] + " ");
             }
             bottom--;
 
             // Traverse from Bottom to Top
-            for(int i=bottom; i>=top; i--){
+            for(int i = bottom; i >= top; i--){
                 System.out.print(matrix[i][left] + " ");
             }
             left++;
