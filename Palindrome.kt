@@ -1,4 +1,4 @@
-fun palindrome(str: String) {
+fun pal(str: String) {
     var flag = true
     for (i in 0..(str.length/2-1)) {
         if(str[i] != str[str.length-1-i]) {
@@ -13,7 +13,15 @@ fun palindrome(str: String) {
     }
 }
 
+fun palindrome(str: String) {
+    pal(str)
+}
+
+fun palindrome(int: Int) {
+    pal(int.toString())
+}
+
 fun main(args: Array<String>) {
     palindrome("Hello")
-    palindrome("BOB")
+    palindrome(12321)
 }
