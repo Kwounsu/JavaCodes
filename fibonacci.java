@@ -1,13 +1,13 @@
 public class Main {
-    public static int fib(int number){ 
-        if(number == 1 || number == 2){ 
+    public static int fib(int num){ 
+        if(num == 1 || num == 2){ 
             return 1; 
         } 
-        return fib(number-1) + fib(number -2);
+        return fib(num-1) + fib(num -2);
     }
     
-    public static void fibonacci(int num) {
-        for (int i = 1; i < num; i++) {
+    public static void fibonacci(int number) {
+        for (int i = 1; i < number; i++) {
             System.out.println(fib(i));
         }
     }
