@@ -13,10 +13,19 @@ public class Main {
         }
         System.out.println();
     }
+    
+    static void reverse(int[] arr) {
+        for (int i = arr.length-1; i >= 0; i--) {
+            System.out.print(arr[i]);
+        }
+        System.out.println();
+    }
 
     public static void main(String[] args) {
         reverse(1234);
         reverse("drawer");
+        int[] arr = {1,2,3,4};
+        reverse(arr);
     }
 }
 
@@ -46,5 +55,7 @@ fun reverse(arr: IntArray) {
 fun main(args: Array<String>) {
     reverse(1234)
     reverse("drawer")
+    val array = intArrayOf(1,2,3,4)
+    reverse(array)
 }
 */
