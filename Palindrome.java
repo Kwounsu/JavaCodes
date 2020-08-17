@@ -1,5 +1,5 @@
 public class Main {
-    static void palindrome(String str) {
+    static void pal(String str) {
         boolean flag = true;
         int i = 0, j = str.length() - 1; 
   
@@ -15,9 +15,18 @@ public class Main {
             System.out.println(str + " is not palindrome.");
         }
     }
+    
+    static void palindrome(String str) {
+        pal(str);
+    }
+    
+    static void palindrome(int integer) {
+        String str = Integer.toString(integer);
+        pal(str);
+    }
 
     public static void main(String[] args) {
         palindrome("Hello");
-        palindrome("BOB");
+        palindrome(12321);
     }
 }
