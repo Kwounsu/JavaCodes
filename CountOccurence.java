@@ -39,3 +39,37 @@ public class Main {
         printOccurence(intArray);
     }
 }
+
+// Kotlin
+/*
+fun printOccurence(arr: IntArray) {
+    val items = HashMap<Int, Int>()
+    
+    // Count the occurence
+    for (i in 0..arr.size-1) {
+        var item = arr[i]
+        if (items.containsKey(item)) {
+            var count = items.get(item)
+            items.remove(item)
+            items.put(item, count!!.plus(1))
+        } else {
+            items.put(item, 1)
+        }
+    }
+    
+    // Sort in descending order
+    val sortedItems = items.toList()
+        .sortedByDescending { (key, value) -> value }
+        .toMap()
+    
+    // Print
+    for (item in sortedItems) {
+        println(item)
+    }
+}
+
+fun main(args: Array<String>) {
+    var arr: IntArray = intArrayOf(21,24,12,132,1,21,2,2,3,2,12,8,9,10)
+    printOccurence(arr)
+}
+*/
