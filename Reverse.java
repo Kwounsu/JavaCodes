@@ -35,6 +35,13 @@ fun reverse(num: Int) {
     }
     println()
 }
+fun reverse(arr: IntArray) {
+    var list: MutableList<Int> = ArrayList()
+    for (i in arr.size-1 downTo 0) {
+        list.add(arr[i])
+    }
+    println(list)
+}
 
 fun main(args: Array<String>) {
     reverse(1234)
