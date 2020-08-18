@@ -1,13 +1,11 @@
 class Result {
     public static int maxTrailing(List<Integer> levels) {
-        int maxDiff = 0;
-        for (int i = levels.size()-1; i >= 0; i--) {
-            for (int j = 0; j < i; j++) {
-                int num1 = levels.get(i), num2 = levels.get(j);
-                if (num1 > num2 && (num1 - num2) > maxDiff) {
-                    int diff = num1 - num2;
-                    if (diff > maxDiff) maxDiff = diff;
-                }
+        int maxDiff = 0, max = levels.get(levels.size()-1);
+        for (int i = levels.size()-2; i >= 0; i--) {
+            if (max < levels.get(i)) max = levels.get(i);
+            else {
+                int diff = max - levels.get(i);
+                if (diff > maxDiff) maxDiff = diff;
             }
         }
         if (maxDiff > 0) return maxDiff;
