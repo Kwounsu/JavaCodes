@@ -33,3 +33,8 @@ fun missingAndRepeating(T: Int) {
         println ("$B $A")
     }
 }
+
+// Java
+/*
+
+*/
