@@ -21,3 +21,25 @@ public class Solution {
         System.out.println("Result: " + result);
     }
 }
+
+// Kotlin
+/*
+fun main(args: Array<String>) {
+    val levels = listOf(2,3,10,2,4,8,1)
+    println(maxTrailing(levels))
+}
+
+fun maxTrailing(levels : List<Int>): Int {
+    var maxDiff = 0 
+    var max = levels[levels.size-1]
+    for (i in levels.size-2 downTo 0) {
+        if (max < levels[i]) max = levels[i]
+        else {
+            var diff = max - levels[i]
+            if (diff > maxDiff) maxDiff = diff
+        }
+    }
+    if (maxDiff > 0) return maxDiff
+    return -1;
+}
+*/
