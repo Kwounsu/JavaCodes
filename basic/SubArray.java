@@ -10,6 +10,7 @@ public class Solution {
         for (int i = 0; i < n; i++) {
             arr[i] = s.nextInt();
         }
+        s.close();
 
         int result = 0;
         for (int i = 0; i < n; i++) {
@@ -22,7 +23,6 @@ public class Solution {
                 if (sum < 0) result++;
             }
         }
-
         System.out.println(result);
     }
 }
