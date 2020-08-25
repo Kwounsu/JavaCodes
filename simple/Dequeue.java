@@ -19,7 +19,7 @@ public class test {
                 if (!deque.contains(ele)) set.remove(ele);
             }
         }
-
+        in.close();
         System.out.println(maxUnique);
     }
 }
