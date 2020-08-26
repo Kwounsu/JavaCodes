@@ -16,12 +16,10 @@ public class Main {
     }
     
     static void prime(int num) {
-        if (isPrime(num)) {
+        if (isPrime(num)) 
             System.out.println(num + " is prime.");
-        }
-        else {
+        else 
             System.out.println(num + " is not prime.");
-        }
     }
     
     public static void main(String[] args) {
