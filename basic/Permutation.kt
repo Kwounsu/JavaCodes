@@ -1,9 +1,9 @@
 fun main(args: Array<String>) {
-    println(permutations("abcd"))
-    println(permutations(listOf('a','b','c','d')))
+    println(consecutivePermutations("abcd"))
+    println(printSubsets(listOf('a','b','c','d')))
 }
 
-fun permutations(s: String): Set<String> {
+fun consecutivePermutations(s: String): Set<String> {
     val permutes = mutableSetOf<String>()
     for (i in 1..s.length) {
         for (j in 0..s.length-i) {
@@ -13,7 +13,7 @@ fun permutations(s: String): Set<String> {
     return permutes
 }
 
-fun permutations(list: List<Char>): Set<List<Char>> {
+fun consecutivePermutations(list: List<Char>): Set<List<Char>> {
     val permutes = mutableSetOf<List<Char>>()
     for (i in 1..list.size) {
         for (j in 0..list.size-i) {
