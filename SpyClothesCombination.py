@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 
 def solution(clothes):
     answer = 0
@@ -27,8 +27,9 @@ def solution(clothes):
             binaryList.append(binary)
         # Multiply category list and binary list
         for i in binaryList:
-            multiplied = np.array(numOfClothes)*np.array(i)
-            multiplied = list([int(x) for x in multiplied])
+            multiplied = list(map(lambda x, y: x * y, numOfClothes, i))
+#             multiplied = np.array(numOfClothes)*np.array(i)
+#             multiplied = list([int(x) for x in multiplied])
             comb = 1
             for j in multiplied:
                 if j > 0:
