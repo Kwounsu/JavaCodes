@@ -5,8 +5,6 @@ d[start] = 0
 pq = [(start,0)]
 
 while len(pq) > 0:
-    print("pq",pq)
-    print("d",d)
     top = pq.pop(0)
     current = top[0]
     distance = top[1]
@@ -15,7 +13,6 @@ while len(pq) > 0:
     for i in graph[current]:
         nextIs = i[0]
         nextDist = distance + i[1]
-        print("nextDist",nextDist)
         if d[nextIs] > nextDist:
             d[nextIs] = nextDist
             pq.append((nextIs,nextDist))
